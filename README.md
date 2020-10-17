@@ -2,9 +2,39 @@
 
 ## Instalacion
 
+### Ubuntu
+1. Descargar Maven desde https://maven.apache.org/download.cgi
+2. Descomprime la carpeta en alguna ubicación de tu preferencia.
+3. En mi caso la he descomprimido y luego copiado en /opt/maven3/ de esta forma
+```bash
+cp -r /home/myuser/Downloads/apache-maven-3.3.3/ /opt/maven3/
+```
+4. Agrega el directorio de maven al PATH y crea una variable de entorno M2_HOME
+5. Como pre-requisito deberas tener instalado Java y definida la variable de entorno JAVA_HOME
+6. Editar archivo .bashrc de tu user con el comando vi ~/.bashrc
+```bash
+export M2_HOME="/opt/maven3"
+export JAVA_HOME="/usr/lib/jvm/default-java"
+export PATH=$PATH:$M2_HOME/bin:$JAVA_HOME/bin
+```
+7.Refresca el PATH y la variable desde una consola ejecutando el comando
+```bash
+source ~/.bashrc
+```
+8. Validar que se haya instalado correctamente verficando la version de Maven
 ```bash
 mvn --version
 ```
+
+Deberias tener una salida similar a esta:
+```bash
+Apache Maven 3.6.3
+Maven home: /usr/share/maven
+Java version: 1.8.0_265, vendor: Private Build, runtime: /usr/lib/jvm/java-8-openjdk-amd64/jre
+Default locale: es_EC, platform encoding: UTF-8
+OS name: "linux", version: "5.4.0-51-generic", arch: "amd64", family: "unix"
+```
+
 ## Creando un Proyecto por Linea de Comandos
 
 Creando un arquetipo
