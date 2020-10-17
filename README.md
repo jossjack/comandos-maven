@@ -17,7 +17,7 @@ export M2_HOME="/opt/maven3"
 export JAVA_HOME="/usr/lib/jvm/default-java"
 export PATH=$PATH:$M2_HOME/bin:$JAVA_HOME/bin
 ```
-7.Refresca el PATH y la variable desde una consola ejecutando el comando
+7. Refresca el PATH y la variable desde una consola ejecutando el comando
 ```bash
 source ~/.bashrc
 ```
